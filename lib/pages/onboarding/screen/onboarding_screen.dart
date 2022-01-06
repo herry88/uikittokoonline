@@ -13,7 +13,7 @@ class _HerryCommerceOnBoardingScreenState
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Dari adfas'),
+      child: const Text('Dari adfas'),
     );
   }
 }
