@@ -1,5 +1,20 @@
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter/material.dart';
+
 class UiKitRoutes {
   static const String herrycommerce = '/herrycommerce_index';
+}
+
+Future showToast(
+    {required String msg, Color? backgroundColor, Color? textColor}) {
+  return Fluttertoast.showToast(
+    msg: msg,
+    toastLength: Toast.LENGTH_SHORT,
+    fontSize: 16,
+    gravity: ToastGravity.CENTER,
+    backgroundColor: backgroundColor,
+    textColor: textColor ?? Colors.white,
+  );
 }
 
 class HerryCommerceRoutes {
@@ -31,6 +46,29 @@ class HerryCommerceRoutes {
   static const String order = '/herrycommerce_order';
   static const String orderDetail = '/herrycommerce_orderDetail';
   static const String checkoutPayment = '/herrycommerce_checkoutPayment';
+}
+
+class Const {
+  static const double margin = 18;
+  static const double radius = 12;
+  static const double space5 = 5;
+  static const double space8 = 8;
+  static const double space12 = 12;
+  static const double space15 = 15;
+  static const double space25 = 25;
+}
+
+class Illustrations {
+  static const String forgotPassword =
+      'assets/illustrations/bellcommerce_forgot_password.svg';
+  static const String forgotPasswordSuccess =
+      'assets/illustrations/bellcommerce_forgot_password_success.svg';
+  static const String onBoarding1 =
+      'assets/illustrations/bellcommerce_on_boarding_1.png';
+  static const String onBoarding2 =
+      'assets/illustrations/bellcommerce_on_boarding_2.png';
+  static const String onBoarding3 =
+      'assets/illustrations/bellcommerce_on_boarding_3.png';
 }
 
 class Assets {

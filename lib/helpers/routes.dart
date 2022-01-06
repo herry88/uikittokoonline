@@ -9,6 +9,7 @@ List<GetPage> allRouteJourney = [
     page: () => const SplasScreenCommerce(),
   ),
   GetPage(
-      name: HerryCommerceRoutes.onboarding,
-      page: () => const HerryCommerceOnBoardingScreen())
+    name: HerryCommerceRoutes.onboarding,
+    page: () => const OnboardingScreen(),
+  ),
 ];

@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 
-class HerryCommerceOnBoardingScreen extends StatefulWidget {
-  const HerryCommerceOnBoardingScreen({Key? key}) : super(key: key);
+class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({Key? key}) : super(key: key);
 
   @override
-  _HerryCommerceOnBoardingScreenState createState() =>
-      _HerryCommerceOnBoardingScreenState();
+  _OnboardingScreenState createState() => _OnboardingScreenState();
 }
 
-class _HerryCommerceOnBoardingScreenState
-    extends State<HerryCommerceOnBoardingScreen> {
+class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: const Text('Dari adfas'),
+      child: const Text('Berhasil'),
     );
   }
 }
