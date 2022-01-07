@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: L10n.all,
       darkTheme: ThemeData.dark(),
       getPages: allRouteJourney,
-      localizationsDelegates: [
+      localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
