@@ -15,6 +15,47 @@ class _BuildBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _theme = Theme.of(context);
-    return Container();
+    return Positioned(
+      child: PageView.builder(
+        itemCount: itemList.length,
+        controller: controller,
+        itemBuilder: (context, index) {
+          final item = itemList[index];
+          return Container(
+            margin: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height / 5,
+            ),
+            width: double.infinity,
+            height: 250,
+            padding: const EdgeInsets.symmetric(
+              horizontal: 18.0,
+            ),
+            child: Column(
+              children: [
+                Image.asset(
+                  item.image!,
+                  width: MediaQuery.of(context).size.height / 2,
+                ),
+                Text(
+                  item.title!,
+                  style: _theme.textTheme.headline3!.copyWith(
+                    fontSize: 30.0,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(
+                  height: 15.0,
+                ),
+                Text(
+                  item.subtitle!,
+                  style: _theme.textTheme.subtitle1!,
+                  textAlign: TextAlign.center,
+                )
+              ],
+            ),
+          );
+        },
+      ),
+    );
   }
 }
