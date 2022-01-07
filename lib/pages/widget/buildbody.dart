@@ -15,6 +15,19 @@ class _BuildBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _theme = Theme.of(context);
-    return Container();
+    return Positioned(
+      child: PageView.builder(
+        itemCount: itemList.length,
+        controller: controller,
+        itemBuilder: (context, index) {
+          final item = itemList[index];
+          return Container(
+            child: Text(
+              'Dari Bodi',
+            ),
+          );
+        },
+      ),
+    );
   }
 }

@@ -17,6 +17,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     super.initState();
   }
 
+  List<OnBoardingModel> _onBoardingPageList(BuildContext context) => [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
