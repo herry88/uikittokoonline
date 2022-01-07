@@ -22,8 +22,31 @@ class _BuildBody extends StatelessWidget {
         itemBuilder: (context, index) {
           final item = itemList[index];
           return Container(
-            child: Text(
-              'Dari Bodi',
+            margin: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height / 5,
+            ),
+            width: double.infinity,
+            height: 250,
+            padding: const EdgeInsets.symmetric(
+              horizontal: 18.0,
+            ),
+            child: Column(
+              children: [
+                Image.asset(
+                  item.image!,
+                  width: MediaQuery.of(context).size.height / 2,
+                ),
+                Text(
+                  item.title!,
+                  style: _theme.textTheme.headline3!.copyWith(
+                    fontSize: 30.0,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(
+                  height: 15.0,
+                )
+              ],
             ),
           );
         },
