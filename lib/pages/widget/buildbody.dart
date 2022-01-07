@@ -45,6 +45,11 @@ class _BuildBody extends StatelessWidget {
                 ),
                 const SizedBox(
                   height: 15.0,
+                ),
+                Text(
+                  item.subtitle!,
+                  style: _theme.textTheme.subtitle1!,
+                  textAlign: TextAlign.center,
                 )
               ],
             ),

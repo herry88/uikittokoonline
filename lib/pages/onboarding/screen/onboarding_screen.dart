@@ -44,13 +44,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           _BuildBody(
             controller: _pageController,
-            itemList: [],
+            itemList: _onBoardingPageList(context),
             onPageChanged: (v) {
-              setState(() {
-                _currentIndex = v;
-              });
+              setState(
+                () {
+                  _currentIndex = v;
+                },
+              );
             },
           ),
+          _BuildFooter(
+            index: _currentIndex,
+            dotsCount: _onBoardingPageList(context).length,
+            onTap: () {
+              if (_currentIndex == 2) {
+                Get.toNamed<dynamic>(HerryCommerceRoutes.signIn);
+              } else {
+                _pageController.nextPage(
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.ease,
+                );
+              }
+            },
+          )
         ],
       ),
     );
