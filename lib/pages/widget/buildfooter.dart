@@ -24,7 +24,9 @@ class _BuildFooter extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           InkWell(
-            onTap: () => Get.toNamed<dynamic>(HerryCommerceRoutes.signIn),
+            onTap: () => Get.toNamed<dynamic>(
+              HerryCommerceRoutes.signIn,
+            ),
             borderRadius: BorderRadius.circular(8),
             child: Container(
               width: 70,

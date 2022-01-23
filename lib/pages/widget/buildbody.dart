@@ -11,14 +11,15 @@ class _BuildBody extends StatelessWidget {
     required this.controller,
     required this.onPageChanged,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     final _theme = Theme.of(context);
+
     return Positioned(
       child: PageView.builder(
         itemCount: itemList.length,
         controller: controller,
+        onPageChanged: onPageChanged,
         itemBuilder: (context, index) {
           final item = itemList[index];
           return Container(
@@ -27,30 +28,25 @@ class _BuildBody extends StatelessWidget {
             ),
             width: double.infinity,
             height: 250,
-            padding: const EdgeInsets.symmetric(
-              horizontal: 18.0,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 18),
             child: Column(
               children: [
                 Image.asset(
                   item.image!,
                   width: MediaQuery.of(context).size.height / 2,
                 ),
+                const SizedBox(height: 15),
                 Text(
                   item.title!,
-                  style: _theme.textTheme.headline3!.copyWith(
-                    fontSize: 30.0,
-                  ),
+                  style: _theme.textTheme.headline3!.copyWith(fontSize: 30),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(
-                  height: 15.0,
-                ),
+                const SizedBox(height: 15),
                 Text(
                   item.subtitle!,
-                  style: _theme.textTheme.subtitle1!,
+                  style: _theme.textTheme.subtitle1!.copyWith(fontSize: 15),
                   textAlign: TextAlign.center,
-                )
+                ),
               ],
             ),
           );
