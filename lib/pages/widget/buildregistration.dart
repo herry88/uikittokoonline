@@ -23,7 +23,7 @@ class _BuildRegisterButton extends StatelessWidget {
             AppLocalizations.of(context)!.register,
             style: Theme.of(context)
                 .textTheme
-                .headline4!
+                .headline6!
                 .copyWith(color: Theme.of(context).primaryColor),
           ),
         )

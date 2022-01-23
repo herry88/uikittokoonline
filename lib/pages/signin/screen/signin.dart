@@ -69,7 +69,7 @@ class _HerryCommerceSignInScreenState extends State<HerryCommerceSignInScreen> {
             const SizedBox(
               height: Const.space25,
             ),
-            _BuildForgotPassword(),
+            const _BuildForgotPassword(),
             CustomElevatedButton(
               onTap: () {
                 setState(() {
