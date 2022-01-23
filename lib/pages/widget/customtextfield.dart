@@ -14,7 +14,7 @@ class CustomTextFormField extends StatelessWidget {
     Key? key,
     required this.controller,
     required this.hintText,
-     this.keyboardType = TextInputType.text,
+    this.keyboardType = TextInputType.text,
     this.obscureText = false,
     this.prefixIcon,
     this.suffixIcon,
@@ -54,10 +54,11 @@ class CustomTextFormField extends StatelessWidget {
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(Const.radius),
-            borderSide: BorderSide(
-              color: _theme.errorColor,
-            )),
+          borderRadius: BorderRadius.circular(Const.radius),
+          borderSide: BorderSide(
+            color: _theme.errorColor,
+          ),
+        ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Const.radius),
           borderSide: BorderSide(
