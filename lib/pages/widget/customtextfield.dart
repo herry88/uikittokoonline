@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:uikit/helpers/constans.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -9,7 +8,8 @@ class CustomTextFormField extends StatelessWidget {
   final bool obscureText;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
-  final ValueChanged<String>? onchaged;
+  final ValueChanged<String>? onChanged;
+
   const CustomTextFormField({
     Key? key,
     required this.controller,
@@ -18,7 +18,7 @@ class CustomTextFormField extends StatelessWidget {
     this.obscureText = false,
     this.prefixIcon,
     this.suffixIcon,
-    this.onchaged,
+    this.onChanged,
   }) : super(key: key);
 
   @override
@@ -30,6 +30,42 @@ class CustomTextFormField extends StatelessWidget {
       cursorColor: _theme.primaryColor,
       obscureText: obscureText,
       keyboardType: keyboardType,
+      style: _theme.textTheme.bodyText2,
+      autocorrect: false,
+      onChanged: onChanged,
+      decoration: InputDecoration(
+        hintText: hintText,
+        hintStyle: _theme.textTheme.subtitle2,
+        prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: Const.margin,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(Const.radius),
+          borderSide: BorderSide(
+            color: _theme.primaryColor.withOpacity(.4),
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(Const.radius),
+          borderSide: BorderSide(
+            color: _theme.primaryColor,
+          ),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(Const.radius),
+          borderSide: BorderSide(
+            color: _theme.errorColor,
+          ),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(Const.radius),
+          borderSide: BorderSide(
+            color: _theme.errorColor,
+          ),
+        ),
+      ),
     );
   }
 }
