@@ -13,3 +13,4 @@ part '../widget/buildheader.dart';
 part '../widget/builddivider.dart';
 part '../widget/buildsocialnetwork.dart';
 part '../widget/buildregistration.dart';
+part '../widget/forgotpassword.dart';
