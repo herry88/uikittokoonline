@@ -33,7 +33,7 @@ class _BuildFooter extends StatelessWidget {
               height: 45,
               alignment: Alignment.center,
               child: Text(index == 2 ? '' : AppLocalizations.of(context)!.skip,
-                  style: _theme.textTheme.headline4),
+                  style: _theme.textTheme.headline6),
             ),
           ),
           Expanded(
@@ -62,7 +62,7 @@ class _BuildFooter extends StatelessWidget {
                 index == 2
                     ? AppLocalizations.of(context)!.next
                     : AppLocalizations.of(context)!.done,
-                style: _theme.textTheme.headline4,
+                style: _theme.textTheme.headline6,
               ),
             ),
           ),
